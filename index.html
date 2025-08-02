@@ -4,35 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>TIC TAC TOE</title>
+    <title>Enhanced TIC TAC TOE</title>
 </head>
 <body>
-    <h1 class="title">TIC TAC TOE</h1>
-    <h2 class="turn-display">Player <span class="cur-player">X</span>'s Turn</h2>
-    <div class="container">
-        <div class="inner">
-           
-           <div id="1" class="box box1"></div>
-           <div id="2" class="box box2"></div>
-           <div id="3" class="box box3"></div>
-           <div id="4" class="box box4"></div>
-           <div id="5" class="box box5"></div>
-           <div id="6" class="box box6"></div>
-           <div id="7" class="box box7"></div>
-           <div id="8" class="box box8"></div>
-           <div id="9" class="box box9"></div>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="game-container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-char">T</span>
+                <span class="title-char">I</span>
+                <span class="title-char">C</span>
+                <span class="title-space"></span>
+                <span class="title-char">T</span>
+                <span class="title-char">A</span>
+                <span class="title-char">C</span>
+                <span class="title-space"></span>
+                <span class="title-char">T</span>
+                <span class="title-char">O</span>
+                <span class="title-char">E</span>
+            </h1>
+            <div class="subtitle">The Ultimate Strategy Game</div>
+        </header>
+
+        <div class="game-info">
+            <div class="turn-display">
+                <div class="player-indicator">
+                    <span class="player-label">Current Player:</span>
+                    <div class="current-player">
+                        <span class="cur-player">X</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-label">Player X</span>
+                    <span class="score-value" id="x-score">0</span>
+                </div>
+                <div class="score-divider"></div>
+                <div class="score-item">
+                    <span class="score-label">Player O</span>
+                    <span class="score-value" id="o-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board-container">
+            <div class="game-board">
+                <div class="grid-overlay"></div>
+                <div id="1" class="box" data-position="1">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="2" class="box" data-position="2">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="3" class="box" data-position="3">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="4" class="box" data-position="4">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="5" class="box" data-position="5">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="6" class="box" data-position="6">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="7" class="box" data-position="7">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="8" class="box" data-position="8">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+                <div id="9" class="box" data-position="9">
+                    <div class="box-content"></div>
+                    <div class="hover-effect"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="reset-btn">
+                <span class="btn-text">RESET GAME</span>
+                <div class="btn-glow"></div>
+            </button>
+            <button class="new-game-btn">
+                <span class="btn-text">NEW MATCH</span>
+                <div class="btn-glow"></div>
+            </button>
         </div>
     </div>
-    <div class="btngroup">
-        <button class="reset-btn">RESET</button>
+
+    <div class="winning-overlay">
+        <div class="winning-content">
+            <div class="trophy-container">
+                <div class="trophy">🏆</div>
+                <div class="trophy-glow"></div>
+            </div>
+            <h1 class="winner-text">
+                <span class="winner-player"></span>
+                <span class="winner-label">WINS!</span>
+            </h1>
+            <div class="celebration-text">Congratulations!</div>
+            <button class="play-again-btn">
+                <span class="btn-text">PLAY AGAIN</span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
     </div>
 
-    <div class="winning-display">
-        <h1 class="winner-display"><i class="fa fa-trophy" aria-hidden="true"><span></span></i><span class="winner"></span>WON THE MATCH</h1>
+    <div class="draw-overlay">
+        <div class="draw-content">
+            <div class="draw-icon">🤝</div>
+            <h1 class="draw-text">IT'S A DRAW!</h1>
+            <div class="draw-subtitle">Well played both!</div>
+            <button class="draw-play-again-btn">
+                <span class="btn-text">PLAY AGAIN</span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
     </div>
 
-
-    <script src="https://kit.fontawesome.com/9b3aa3e7d3.js" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
 </html>
